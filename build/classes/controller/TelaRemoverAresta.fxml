@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="299.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaRemoverArestaController">
+   <children>
+      <Pane prefHeight="299.0" prefWidth="447.0">
+         <children>
+            <ImageView fitHeight="260.0" fitWidth="447.0" layoutY="39.0" opacity="0.5">
+               <image>
+                  <Image url="@../imagem/bg_serviso_home_of.jpg" />
+               </image>
+            </ImageView>
+            <MenuBar prefHeight="25.0" prefWidth="447.0" />
+            <Button fx:id="btnRemoveAresta" layoutX="124.0" layoutY="255.0" mnemonicParsing="false" onAction="#removerAresta" prefHeight="35.0" prefWidth="199.0" text="Remover" />
+            <Label fx:id="lblAresta" layoutX="265.0" layoutY="102.0" prefHeight="35.0" prefWidth="68.0" text="Arestas:" textFill="#0e3b5b">
+               <font>
+                  <Font name="Rockwell" size="17.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="combo" layoutX="173.0" layoutY="137.0" prefHeight="25.0" prefWidth="262.0" />
+            <Button fx:id="bntVoltar" layoutX="14.0" layoutY="260.0" mnemonicParsing="false" onAction="#voltar" prefHeight="25.0" prefWidth="56.0" text="Voltar" />
+            <Label layoutX="149.0" layoutY="39.0" prefHeight="35.0" prefWidth="150.0" text="REMOVER ARESTA" textFill="#0e3b5b">
+               <font>
+                  <Font name="Rockwell" size="17.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Label>
+            <Button fx:id="btnNovaRemocao" layoutX="338.0" layoutY="255.0" mnemonicParsing="false" onAction="#adicionaNovaAresta" prefHeight="35.0" prefWidth="97.0" text="Nova Remoção" />
+            <Label fx:id="lblAviso" layoutX="13.0" layoutY="220.0" prefHeight="35.0" prefWidth="422.0" textAlignment="CENTER" textFill="#9e0404">
+               <font>
+                  <Font name="Rockwell" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
